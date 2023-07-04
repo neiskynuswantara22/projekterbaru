@@ -203,6 +203,7 @@ class DashboardClassView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         request = self.request
+        context["menus"] = ""
         set_user_menus(request, context)
         context.update(self.extra_context)
         return context
