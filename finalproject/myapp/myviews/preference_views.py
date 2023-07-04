@@ -46,6 +46,8 @@ class DashboardClassView(ListView):
         else:
             self.object_list = self.get_queryset()
             context = self.get_context_data(**kwargs)
+            context["menus"] = ""
+            set_user_menus(request, context)
             self.customize_context(context)  # Call the customize_context method
             return render(request, self.template_name, context)
 
@@ -203,8 +205,6 @@ class DashboardClassView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         request = self.request
-        context["menus"] = ""
-        set_user_menus(request, context)
         context.update(self.extra_context)
         return context
 
