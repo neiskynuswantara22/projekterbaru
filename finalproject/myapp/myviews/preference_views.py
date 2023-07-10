@@ -17,8 +17,8 @@ class IndexClassView(View):
     template_name = "myapp/index.html"
     context = {
         "title": "Home",
-        "contributor": "VisionSlice Team",
-        "content": "Welcome to VisionSlice!",
+        "contributor": "SEGMENION Team",
+        "content": "Welcome to SEGMENION!",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "logo": "myapp/images/Logo.png",
@@ -46,8 +46,6 @@ class DashboardClassView(ListView):
         else:
             self.object_list = self.get_queryset()
             context = self.get_context_data(**kwargs)
-            context["menus"] = ""
-            set_user_menus(request, context)
             self.customize_context(context)  # Call the customize_context method
             return render(request, self.template_name, context)
 
@@ -192,8 +190,8 @@ class DashboardClassView(ListView):
             "uploaders": uploaders,
             "colors": colors,
             "title": "Dashboard",
-            "contributor": "VisionSlice Team",
-            "content": "Dashboard, a place to see the overview of the data in VisionSlice. You can see the number of data uploaded by each user, the number of segmented and unsegmented data, the color distribution of the images, and the number of segmentations for each segmentation type.",
+            "contributor": "SEGMENION Team",
+            "content": "Dashboard, a place to see the overview of the data in SEGMENION. You can see the number of data uploaded by each user, the number of segmented and unsegmented data, the color distribution of the images, and the number of segmentations for each segmentation type.",
             "app_css": "myapp/css/styles.css",
             "app_js": "myapp/js/scripts.js",
             "logo": "myapp/images/Logo.png",
@@ -205,6 +203,7 @@ class DashboardClassView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         request = self.request
+        set_user_menus(request, context)
         context.update(self.extra_context)
         return context
 
@@ -216,8 +215,8 @@ class DashboardClassView(ListView):
 class AboutClassView(View):
     context = {
         "title": "About",
-        "contributor": "VisionSlice Team",
-        "content": "Welcome to VisionSlice!",
+        "contributor": "SEGMENION Team",
+        "content": "Welcome to SEGMENION!",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -233,8 +232,8 @@ class AboutClassView(View):
 class BlogClassView(View):
     context = {
         "title": "Blog",
-        "contributor": "VisionSlice Team",
-        "content": "Welcome to VisionSlice!",
+        "contributor": "SEGMENION Team",
+        "content": "Welcome to SEGMENION!",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -243,22 +242,22 @@ class BlogClassView(View):
             {
                 "title": "Blog Post 1",
                 "url": "/blog/post1/",
-                "content": "Welcome to VisionSlice!",
-                "author": "VisionSlice Team",
+                "content": "Welcome to SEGMENION!",
+                "author": "SEGMENION Team",
                 "date_posted": "August 27, 2018",
             },
             {
                 "title": "Blog Post 2",
                 "url": "/blog/post2/",
-                "content": "Welcome to VisionSlice!",
-                "author": "VisionSlice Team",
+                "content": "Welcome to SEGMENION!",
+                "author": "SEGMENION Team",
                 "date_posted": "August 28, 2018",
             },
             {
                 "title": "Blog Post 3",
                 "url": "/blog/post3/",
-                "content": "Welcome to VisionSlice!",
-                "author": "VisionSlice Team",
+                "content": "Welcome to SEGMENION!",
+                "author": "SEGMENION Team",
                 "date_posted": "August 29, 2018",
             },
         ],
@@ -273,8 +272,8 @@ class BlogClassView(View):
 class ContactClassView(View):
     context = {
         "title": "Contact",
-        "content": "Welcome to VisionSlice!",
-        "contributor": "VisionSlice Team",
+        "content": "Welcome to SEGMENION!",
+        "contributor": "SEGMENION Team",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -290,8 +289,8 @@ class ContactClassView(View):
 class DocsClassView(View):
     context = {
         "title": "Docs",
-        "content": "Welcome to VisionSlice!",
-        "contributor": "VisionSlice Team",
+        "content": "Welcome to SEGMENION!",
+        "contributor": "SEGMENION Team",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -312,8 +311,8 @@ class DocsClassView(View):
 class HelpClassView(View):
     context = {
         "title": "Help",
-        "contributor": "VisionSlice Team",
-        "content": "Welcome to VisionSlice!",
+        "contributor": "SEGMENION Team",
+        "content": "Welcome to SEGMENION!",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -329,8 +328,8 @@ class HelpClassView(View):
 class PreferenceSettingClassView(View):
     context = {
         "title": "Setting",
-        "content": "Welcome to VisionSlice!",
-        "contributor": "VisionSlice Team",
+        "content": "Welcome to SEGMENION!",
+        "contributor": "SEGMENION Team",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -351,8 +350,8 @@ class PreferenceSettingClassView(View):
 class PreferenceClassView(View):
     context = {
         "title": "Preferences",
-        "content": "Welcome to VisionSlice!",
-        "contributor": "VisionSlice Team",
+        "content": "Welcome to SEGMENION!",
+        "contributor": "SEGMENION Team",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,
@@ -373,8 +372,8 @@ class PreferenceClassView(View):
 class SettingClassView(View):
     context = {
         "title": "Settings",
-        "contributor": "VisionSlice Team",
-        "content": "Welcome to VisionSlice!",
+        "contributor": "SEGMENION Team",
+        "content": "Welcome to SEGMENION!",
         "app_css": "myapp/css/styles.css",
         "app_js": "myapp/js/scripts.js",
         "menus": menus,

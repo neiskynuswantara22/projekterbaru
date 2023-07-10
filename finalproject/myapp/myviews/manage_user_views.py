@@ -26,8 +26,8 @@ from myapp.models import (
 )
 
 base_context = {
-    "content": "Welcome to VisionSlice!",
-    "contributor": "VisionSlice Team",
+    "content": "Welcome to SEGMENION!",
+    "contributor": "SEGMENION Team",
     "app_css": "myapp/css/styles.css",
     "app_js": "myapp/js/scripts.js",
     "menus": menus,

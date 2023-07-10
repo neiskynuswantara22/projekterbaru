@@ -41,12 +41,12 @@ urlpatterns = [
         name="report_export_image",
     ),
     path("report/", views.ReportClassView.as_view(), name="report"),
-    # path(
-    #     "preference/setting/",
-    #     views.PreferenceSettingClassView.as_view(),
-    #     name="preference_setting",
-    # ),
-    # path("preference/", views.PreferenceClassView.as_view(), name="preference"),
+    path(
+        "preference/setting/",
+        views.PreferenceSettingClassView.as_view(),
+        name="preference_setting",
+    ),
+    path("preference/", views.PreferenceClassView.as_view(), name="preference"),
     path(
         "manage/user/reset-password/<int:pk>/",
         views.ManageUserResetPasswordClassView.as_view(),
