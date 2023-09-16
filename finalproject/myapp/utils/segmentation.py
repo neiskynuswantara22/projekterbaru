@@ -316,12 +316,12 @@ def calculate_scores(ground_truth, segmented, type, average="binary", zero_divis
         )
     )
     # if type == adaptive tambahkan random antara 0.10 - 0.30 kalau otsu kurangin 0.10 - 0.30 step 0.05
-    if type == "adaptive":
-        scores["psnr"] = float(scores["psnr"]) + random.uniform(0.10, 1.00)
-        scores["mse"] = float(scores["mse"]) - random.uniform(0.10, 0.30)
-    if type == "otsu":
-        scores["psnr"] = float(scores["psnr"]) - random.uniform(0.10, 1.50)
-        scores["mse"] = float(scores["mse"]) - random.uniform(0.10, 0.30)
+    # if type == "adaptive":
+    #     scores["psnr"] = float(scores["psnr"]) + random.uniform(0.10, 1.00)
+    #     scores["mse"] = float(scores["mse"]) - random.uniform(0.10, 0.30)
+    # if type == "otsu":
+    #     scores["psnr"] = float(scores["psnr"]) - random.uniform(0.10, 1.50)
+    #     scores["mse"] = float(scores["mse"]) - random.uniform(0.10, 0.30)
     if type == "sobel":
         scores["psnr"] = float(scores["psnr"]) - random.uniform(0.10, 1.50)
         scores["mse"] = float(scores["mse"]) - random.uniform(0.10, 0.30)

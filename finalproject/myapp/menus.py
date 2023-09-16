@@ -74,12 +74,12 @@ it_admin_menus = [
                 "fas fa-table",
                 id="table",
             ),
-            create_menu(
-                "Segmentation Summary",
-                "/segmentation/summary/",
-                "fas fa-chart-bar",
-                id="segmentation_summary",
-            ),
+            # create_menu(
+            #     "Segmentation Summary",
+            #     "/segmentation/summary/",
+            #     "fas fa-chart-bar",
+            #     id="segmentation_summary",
+            # ),
         ],
     ),
 ]

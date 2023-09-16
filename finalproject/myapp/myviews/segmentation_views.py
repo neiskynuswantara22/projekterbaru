@@ -98,8 +98,8 @@ class SegmentationClassView(ListView):
             "uploaders": uploaders,
             "colors": colors,
             "title": "Segmentation",
-            "contributor": "SEGMENION Team",
-            "content": "Welcome to SEGMENION! This is a website for image segmentation.",
+            "contributor": "SEGMENNION Team",
+            "content": "Welcome to SEGMENNION! This is a website for image segmentation.",
             "app_css": "myapp/css/styles.css",
             "app_js": "myapp/js/scripts.js",
             "logo": "myapp/images/Logo.png",
@@ -189,10 +189,10 @@ class SegmentationDetailClassView(DetailView):
         self.customize_context(context)
 
         context["title"] = "Segmentation Detail"
-        context["contributor"] = "SEGMENION Team"
+        context["contributor"] = "SEGMENNION Team"
         context[
             "content"
-        ] = "Welcome to SEGMENION! This is a website for image segmentation."
+        ] = "Welcome to SEGMENNION! This is a website for image segmentation."
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -242,10 +242,10 @@ class SegmentationDeleteClassView(DeleteView):
         self.customize_context(context)
 
         context["title"] = "Segmentation Delete"
-        context["contributor"] = "SEGMENION Team"
+        context["contributor"] = "SEGMENNION Team"
         context[
             "content"
-        ] = "Welcome to SEGMENION! This is a website for image segmentation."
+        ] = "Welcome to SEGMENNION! This is a website for image segmentation."
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -455,8 +455,8 @@ class SegmentationSummaryClassView(ListView):
             "uploaders": uploaders,
             "colors": colors,
             "title": "Segmentation Summary",
-            "contributor": "SEGMENION Team",
-            "content": "Welcome to SEGMENION! This is a website for image segmentation.",
+            "contributor": "SEGMENNION Team",
+            "content": "Welcome to SEGMENNION! This is a website for image segmentation.",
             "app_css": "myapp/css/styles.css",
             "app_js": "myapp/js/scripts.js",
             "logo": "myapp/images/Logo.png",
