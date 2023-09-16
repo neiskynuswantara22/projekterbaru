@@ -1,13 +1,13 @@
-# skripsi-mukti
+# skripsi-neisky
 
-Skripsi Mukti is a web application that can be used to manage the data of theses and dissertations in the Faculty of Engineering, Universitas Nusantara PGRI Kediri. This application is built using the Django framework and MySQL database. This application is also equipped with a REST API that can be used to access the data in the application. This aplication for my final project in Universitas Nusantara PGRI Kediri.
+Segmennion is a web application that can be used to manage the data of theses and dissertations in the Faculty of Engineering, Universitas Nusantara PGRI Kediri. This application is built using the Django framework and MySQL database. This application is also equipped with a REST API that can be used to access the data in the application. This aplication for my final project in Universitas Nusantara PGRI Kediri.
 
 ## Installation
 
 1. Clone this repository
 
     ```bash
-    git clone https://github.com/ikimukti/skripsi-mukti.git
+    git clone https://github.com/neiskynuswantara22/projekterbaru.git
     ```
 
 2. Install Python Latest Version in Windows, Linux, or Mac
@@ -89,7 +89,7 @@ Skripsi Mukti is a web application that can be used to manage the data of theses
 5. Environment Setup
 
     ```bash
-    cd skripsi-mukti
+    cd projekterbaru
     python3 -m venv env
     source venv/bin/activate # Linux or Mac 
     env\Scripts\activate # Windows
@@ -122,7 +122,7 @@ Skripsi Mukti is a web application that can be used to manage the data of theses
     Open XAMPP Control Panel
     Start the Apache and MySQL
     Open the browser and go to http://localhost/phpmyadmin/
-    Create database with name finalprojectdb
+    Create database with name dbneisky
     python manage.py migrate
     ```
 
@@ -130,7 +130,7 @@ Skripsi Mukti is a web application that can be used to manage the data of theses
     # Linux
     sudo /opt/lampp/lampp start
     Open the browser and go to http://localhost/phpmyadmin/
-    Create database with name finalprojectdb
+    Create database with name dbneisky
     python manage.py migrate
     ```
 
@@ -139,7 +139,7 @@ Skripsi Mukti is a web application that can be used to manage the data of theses
     Open XAMPP Control Panel
     Start the Apache and MySQL
     Open the browser and go to http://localhost/phpmyadmin/
-    Create database with name finalprojectdb
+    Create database with name dbneisky
     python manage.py migrate
     ```
 
@@ -159,8 +159,8 @@ Skripsi Mukti is a web application that can be used to manage the data of theses
     ```bash
     python manage.py createsuperuser
     # Enter your username, email, and password
-    Username (leave blank to use 'smkn1kediri'): admin
-    Email address: admin@ikimukti.com
+    Username (leave blank to use 'smkcbpare'): admin
+    Email address: admin@neisky.com
     Password: 
     Password (again): 
     Superuser created successfully.
